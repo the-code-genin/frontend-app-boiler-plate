@@ -1,0 +1,15 @@
+{
+  "name": "virtual-dom",
+  "version": "1.0.0",
+  "description": "Recreating reactive interfaces with typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/index.ts --outDir dist"
+  },
+  "author": "Mohammed Adekunle",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
