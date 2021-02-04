@@ -1,4 +1,5 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -11,11 +12,14 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+  ],
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
