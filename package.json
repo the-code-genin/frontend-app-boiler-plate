@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc src/index.ts --outDir dist"
+    "build": "webpack"
   },
   "author": "Mohammed Adekunle",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.1.3"
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0"
   }
 }
