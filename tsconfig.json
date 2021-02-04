@@ -2,12 +2,13 @@
     "compilerOptions": {
       "target": "esnext",
       "module": "commonjs",
-      "rootDir": "./src",
+      "rootDir": "./",
       "outDir": "./dist",
       "esModuleInterop": true,
       "strict": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
+      "allowJs": true,
       "typeRoots": [
         "./src/types",
         "./node_modules/@types"
