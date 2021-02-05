@@ -1,11 +1,15 @@
 export default class ListApp {
-    private items: string[] = [];
+    private items: string[];
 
-    constructor(readonly DOMElement: HTMLDivElement) {
+    constructor(readonly DOMElement: HTMLDivElement, initialItems: string[] = []) {
+        this.items = initialItems;
+
         let button = DOMElement.querySelector('button#add-button') as HTMLButtonElement;
         button.addEventListener('click', () => {
             this.addItem('');
         });
+
+        this.renderList();
     }
 
     public getItems(): string[] {
