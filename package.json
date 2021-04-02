@@ -1,7 +1,7 @@
 {
-  "name": "virtual-dom",
+  "name": "ts-frontend",
   "version": "1.0.0",
-  "description": "Recreating reactive interfaces with typescript.",
+  "description": "Creating browser frontend interfaces with typescript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
