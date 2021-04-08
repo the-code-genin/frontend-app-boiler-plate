@@ -3,3 +3,9 @@ $dark: #323232;
 h1 {
     color: $dark;
 }
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
