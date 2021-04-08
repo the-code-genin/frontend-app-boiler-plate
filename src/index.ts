@@ -1,10 +1,7 @@
-import ListApp from "./list-app";
+import './scss/style.scss';
 
 function AppInit(e: Event) {
-    let listAppElement = document.querySelector('#list_app') as HTMLDivElement | null;
-    if (listAppElement == null) return;
-
-    let listApp = new ListApp(listAppElement, ['Hello', 'World']);
+    console.log('App running.');
 }
 
 window.addEventListener('load', AppInit);
