@@ -66,8 +66,10 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   devServer: {
-    contentBase: './dist',
-    hot: true,
+    contentBase: './dist', // If you update this ensure you update the output path
+    hot: true, // Enable hot reload
+    port: 8080,
+    historyApiFallback: true, // Set to true to enable url rewrites if using a frontend router
   },
   output: {
     filename: '[name].bundle.js',
