@@ -67,7 +67,9 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist', // If you update this ensure you update the output path
-    hot: true, // Enable hot reload
+    hot: false,
+    watchContentBase: true,
+    liveReload: true,
     port: 8080,
     historyApiFallback: true, // Set to true to enable url rewrites if using a frontend router
   },
