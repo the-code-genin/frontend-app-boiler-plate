@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   // The entry file(s) by default it points to the index typescript file
@@ -26,14 +27,14 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
         ],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader",
         ],
@@ -67,6 +68,9 @@ module.exports = {
         { from: "src/static", to: "" },
       ],
     }),
+
+    // Extract css from js files to optimze the output
+    new MiniCssExtractPlugin()
   ],
 
   resolve: {
