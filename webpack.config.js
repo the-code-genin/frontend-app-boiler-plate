@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  // The entry file(s) by default it points to the index typescript file
   entry: './src/index.ts',
+
+  // Module loaders
   module: {
     rules: [
       {
@@ -44,40 +47,47 @@ module.exports = {
       },
     ],
   },
+
   plugins: [
+    // The index page
     new HtmlWebpackPlugin({
       template: 'src/index.htm',
-      title: 'Typescript Frontend',
+      title: 'Modern Browser App',
       meta: {
         'utf-8': {charset: 'utf-8'},
         viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-        description: "This is a sample typescript frontend app.",
-        author: 'Mohammed Adekunle',
+        description: "Modern browser app boiler plate with webpack.",
       },
       inject: 'body'
     }),
+
+    // Copy files from the src/static directory to the build directory
     new CopyPlugin({
       patterns: [
-        { from: "public", to: "" },
+        { from: "src/static", to: "" },
       ],
     }),
   ],
+
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
+
   devServer: {
     contentBase: './dist', // If you update this ensure you update the output path
     hot: false,
     watchContentBase: true,
     liveReload: true,
     port: 8080,
-    historyApiFallback: true, // Set to true to enable url rewrites if using a frontend router
+    historyApiFallback: true, // Set to false to disable url rewrites
   },
+
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
+
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
