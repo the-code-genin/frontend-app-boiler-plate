@@ -15,7 +15,7 @@ module.exports = {
         use: {
           loader: 'ts-loader',
           options: {
-            transpileOnly: true,
+            // transpileOnly: true, // If set to true, compile speed is faster but type compile-time checking is disabled
           },
         },
         exclude: /node_modules/,
