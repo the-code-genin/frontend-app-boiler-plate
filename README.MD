@@ -16,7 +16,7 @@ Developed and maintained by [Mohammed Adekunle](https://mohammedadekunle.com.ng)
 
 - Clone the repo on your development machine.
 - Run `npm i` to install dependencies.
-- Run `npm run serve` to fire up the dev server.
+- Run `npm run dev` to fire up the dev server.
 - Run `npm run build` to compile the files into a standalone app for production.
 
 # Licensing
