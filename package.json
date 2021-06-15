@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack serve --open",
+    "dev": "webpack serve --open",
     "build": "webpack"
   },
   "author": "Mohammed Adekunle",
