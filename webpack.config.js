@@ -62,10 +62,10 @@ module.exports = {
       inject: 'body'
     }),
 
-    // Copy files from the src/static directory to the build directory
+    // Copy files from the public directory to the build directory
     new CopyPlugin({
       patterns: [
-        { from: "src/static", to: "" },
+        { from: path.resolve(__dirname, "public"), to: "" },
       ],
     }),
 
